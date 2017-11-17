@@ -1,0 +1,27 @@
+{
+  "name": "bananhackerz_back",
+  "version": "1.0.0",
+  "description": "Les backend et les bouchons",
+  "main": "App.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bynaryman/bananhackerz_back.git"
+  },
+  "keywords": [
+    "hackathon",
+    "insomnihack",
+    "banane"
+  ],
+  "author": "Louis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bynaryman/bananhackerz_back/issues"
+  },
+  "homepage": "https://github.com/Bynaryman/bananhackerz_back#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
