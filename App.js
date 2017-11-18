@@ -9,7 +9,7 @@ const logger     = require('morgan');
 
 // load all routers
 let aeroports       = require('./aeroports');
-//let compagnies      = require('./compagnies');
+let compagnies      = require('./compagnies');
 //let infra           = require('./infra');
 
 const app = express();
@@ -43,7 +43,7 @@ app.use(common.middlewares.methodReceivedLogMiddleware(loggerFile));
 app.disable('x-powered-by');
 
 aeroports(app, loggerFile);
-//compagnies(app, loggerFile);
+compagnies(app, loggerFile);
 //infra(app, loggerFile);
 
 

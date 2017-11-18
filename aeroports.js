@@ -1,42 +1,91 @@
 /**
- * 
+ * Created by Binaryman on 18/11
  */
 
 const express    = require('express');
 const common     = require('./common');
 
 module.exports = function (app, loggerFile) {
-    
+
     // add routes to the app
     const router = express.Router();
+    
+    const airports = {
+        1: {
+            shops: {
 
-    const travels = {
-       'V4286': {
-            'dest': 'test',
-            'from': 'paris'
+            },
+            guichets: {
+
+            },
+            toilettes: {
+
+            },
+            restaurants: {
+
+            }
         },
-        'RY1337': {
+        2: {
+            shops: {
 
+            },
+            guichets: {
+
+            },
+            toilettes: {
+
+            },
+            restaurants: {
+
+            }
+        },
+        3: {
+            shops: {
+
+            },
+            guichets: {
+
+            },
+            toilettes: {
+
+            },
+            restaurants: {
+
+            }
+        },
+        4: {
+            shops: {
+
+            },
+            guichets: {
+
+            },
+            toilettes: {
+
+            },
+            restaurants: {
+
+            }
         }
     }
 
     // we say the main app to use the community router
     app.use('/aeroports', router);
 
-    // the mock route to get a travel infos
+    // the mock route to get the shops of an airport
     router.get(
-	'/:name',
-	function (req, res) {
+        '/:id(\\d+)/',
+        function (req, res) {
+
+            const id = req.params.id;
             
-            const name = req.params.name;
-            console.log(name);
-            if (travels.hasOwnProperty(name)) {
-	        res.status(200).send(travels[name]);
+            if (airports.hasOwnProperty(id)) {
+                res.status(200).send(airports[id]);
                 res.end();
             }
             else {
                 res.status(404).send(common.ERROR_404);
                 res.end();
             }
-	});
+        });
 }
