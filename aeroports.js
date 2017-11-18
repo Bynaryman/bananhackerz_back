@@ -12,8 +12,9 @@ module.exports = function (app, loggerFile) {
     
     const airports = {
         1: {
+            name: "Londres",
             shops: {
-
+            
             },
             guichets: {
 
@@ -22,6 +23,9 @@ module.exports = function (app, loggerFile) {
 
             },
             restaurants: {
+
+            },
+            dab: {
 
             }
         },
